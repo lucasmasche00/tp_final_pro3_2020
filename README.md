@@ -1,1 +1,6 @@
-# tp_final_pro3_2020
+===============================================
+| USUARIOS CON CLAVES                         |
+| socio: belu@gmail.com / martillo            |
+| empleado: fer@gmail.com / serrucho          |
+| cliente: pedro@gmail.com / pinza            |
+===============================================
