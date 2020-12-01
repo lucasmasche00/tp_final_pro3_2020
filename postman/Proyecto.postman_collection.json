@@ -1,0 +1,2548 @@
+{
+	"info": {
+		"_postman_id": "cccf5652-fc0c-4746-839a-730b7c1b97cf",
+		"name": "Proyecto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Usuarios/GetOne",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/usuarios/belu@gmail.com",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"usuarios",
+								"belu@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios/GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/usuarios",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario/Insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "test2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "martillo",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "socio",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "activo",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/usuarios",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios/Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "clave",
+									"value": "martillo",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "socio",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "suspendido",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/usuarios/juampi@gmail.com",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"usuarios",
+								"juampi@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios/Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/usuarios/juampi@gmail.com",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"usuarios",
+								"juampi@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Empleados",
+			"item": [
+				{
+					"name": "Empleado/Insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "legajo",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "fer@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "fernanda",
+									"type": "text"
+								},
+								{
+									"key": "apellido",
+									"value": "gutierrez",
+									"type": "text"
+								},
+								{
+									"key": "ocupacion",
+									"value": "bartender",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "activo",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/empleados",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empleado/GetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/empleados",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empleado/GetOne",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/empleados/1234",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"empleados",
+								"1234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empleado/Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "fer@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "fernanda",
+									"type": "text"
+								},
+								{
+									"key": "apellido",
+									"value": "lopez",
+									"type": "text"
+								},
+								{
+									"key": "ocupacion",
+									"value": "bartender",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "activo",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/empleados/1234",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"empleados",
+								"1234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empleado/Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/empleados/1233",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"empleados",
+								"1233"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Comandas",
+			"item": [
+				{
+					"name": "Comanda/Insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "{{tokenSocio}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "legajo",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "codigoMesa",
+									"value": "ABCD1",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/comandas",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comandas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ComandaGetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "{{tokenSocio}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/comandas",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comandas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comanda/GetOne",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "{{tokenSocio}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/comandas/aSKPv",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comandas",
+								"aSKPv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comanda/Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "{{tokenSocio}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "legajo",
+									"value": "1233",
+									"type": "text"
+								},
+								{
+									"key": "codigoMesa",
+									"value": "ABCD1",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/comandas/TS5vy",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comandas",
+								"TS5vy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comanda/Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "{{tokenSocio}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/comandas/1233",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comandas",
+								"1233"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Mesas",
+			"item": [
+				{
+					"name": "Mesa/Insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mesaCode",
+									"value": "ABC12",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/mesas",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mesas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mesas/GetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/mesas",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mesas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mesa/GetOne",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/mesas/ABC12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mesas",
+								"ABC12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mesa/Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "estado",
+									"value": "con cliente esperando pedido",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "/C:/Users/Kaina/Pictures/belen_ruiz.jpg",
+									"disabled": true
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/mesas/ABCD2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mesas",
+								"ABCD2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mesa/Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/mesas/ABC12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mesas",
+								"ABC12"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Alimentos",
+			"item": [
+				{
+					"name": "Alimento/Insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mesaCode",
+									"value": "ABCD5",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/alimentos",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"alimentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alimento/Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "categoria",
+									"value": "vino",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Stella Artois",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "50.3",
+									"type": "text"
+								},
+								{
+									"key": "minutosDePreparacion",
+									"value": "5",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/alimentos/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"alimentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alimentos/GetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/alimentos",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"alimentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alimento/GetOne",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/alimentos/ABC12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"alimentos",
+								"ABC12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alimento/Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/alimentos/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"alimentos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "Pedido/Insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigoComanda",
+									"value": "fSZQM",
+									"type": "text"
+								},
+								{
+									"key": "alimentoId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "cantidad",
+									"value": "2",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/pedidos",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedido/GetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "{{tokenSocio}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/pedidos",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedido/GetOne",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/pedidos/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pedidos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedido/Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "legajo",
+									"value": "1236",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "codigoComanda",
+									"value": "FhK65",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "alimentoId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cantidad",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "en preparacion",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/pedidos/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pedidos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedido/Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/pedidos/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pedidos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Encuestas",
+			"item": [
+				{
+					"name": "Encuestas/Insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "puntajeMesa",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "puntajeRestaurante",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "puntajeMozo",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "puntajeCocinero",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Volveria de nuevo",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/encuestas",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"encuestas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Encuestas/GetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/encuestas",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"encuestas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Encuestas/GetOne",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/encuestas/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"encuestas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Encuesta/Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/encuestas/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"encuestas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Encuesta/Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{tokenSocio}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "puntajeMesa",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "puntajeRestaurante",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "puntajeMozo",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "puntajeCocinero",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Volveria de nuevo",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/encuestas/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"encuestas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Administrador",
+			"item": [
+				{
+					"name": "De los empleados",
+					"item": [
+						{
+							"name": "a. GetIngresosAlSistema",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/ingresosAlSistema",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"ingresosAlSistema"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "b. GetCantidadDeOperacionesPorSector",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/cantidadDeOperacionesPorSector",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"cantidadDeOperacionesPorSector"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "c. GetCantidadDeOperacionesPorSectorYEmpleado",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/cantidadDeOperacionesPorSectorYEmpleado",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"cantidadDeOperacionesPorSectorYEmpleado"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "d. GetCantidadDeOperacionesPorEmpleado",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/cantidadDeOperacionesPorEmpleado",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"cantidadDeOperacionesPorEmpleado"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "e.1. Dar de alta usuario",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "test2@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "clave",
+											"value": "martillo",
+											"type": "text"
+										},
+										{
+											"key": "tipo",
+											"value": "socio",
+											"type": "text"
+										},
+										{
+											"key": "estado",
+											"value": "activo",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/usuarios",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "e.2. Dar de alta empleado",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "legajo",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "fer@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "nombre",
+											"value": "fernanda",
+											"type": "text"
+										},
+										{
+											"key": "apellido",
+											"value": "gutierrez",
+											"type": "text"
+										},
+										{
+											"key": "ocupacion",
+											"value": "bartender",
+											"type": "text"
+										},
+										{
+											"key": "estado",
+											"value": "activo",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/empleados",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"empleados"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "e.3. Suspender empleado",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "diana@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "nombre",
+											"value": "fernanda",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "apellido",
+											"value": "lopez",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "ocupacion",
+											"value": "bartender",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "estado",
+											"value": "suspendido",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/empleados/1237",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"empleados",
+										"1237"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "e.4. Borrar empleado",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/empleados/1237",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"empleados",
+										"1237"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "De los pedidos",
+					"item": [
+						{
+							"name": "a. GetAlimentoMasVendido",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/productoMasVendido",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"productoMasVendido"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "b. GetAlimentoMenosVendido",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/productoMenosVendido",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"productoMenosVendido"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "c. GetPedidosEntregadosFueraDeTiempo",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/pedidosEntregadosFueraDeTiempo",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"pedidosEntregadosFueraDeTiempo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "d. GetPedidosCancelados",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/pedidosCancelados",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"pedidosCancelados"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "De las mesas",
+					"item": [
+						{
+							"name": "a. MesaMasUsada",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/mesaMasUsada",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"mesaMasUsada"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "b. MesaMenosUsada",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/mesaMenosUsada",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"mesaMenosUsada"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "c. MesaMasFacturo",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/mesaMasFacturo",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"mesaMasFacturo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "d. MesaMenosFacturo",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/mesaMenosFacturo",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"mesaMenosFacturo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "e. MesaMayorFacturaIndividual",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/mesaMayorFacturaIndividual",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"mesaMayorFacturaIndividual"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "f. MesaMenorFacturaIndividual",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/mesaMenorFacturaIndividual",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"mesaMenorFacturaIndividual"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "g. MesaFacturoPorFechas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/mesaFacturoPorFechas/ABCD2/2020-09-01/2020-12-20",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"mesaFacturoPorFechas",
+										"ABCD2",
+										"2020-09-01",
+										"2020-12-20"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "h. MejoresComentarios",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/mejoresComentarios",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"mejoresComentarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "i. PeoresComentarios",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{tokenSocio}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/socios/peoresComentarios",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"socios",
+										"peoresComentarios"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "1. TomarPedido [Mozo]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "{{tokenMozo}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigoMesa",
+							"value": "ABCD2",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/C:/Users/Kaina/Pictures/j.png"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/mozo/crearComanda",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"mozo",
+						"crearComanda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. AsignarPedidoALaComanda [Mozo]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "{{tokenMozo}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigoComanda",
+							"value": "FhK65",
+							"type": "text"
+						},
+						{
+							"key": "alimentoId",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "cantidad",
+							"value": "2",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/mozo/asignarPedidoALaComanda",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"mozo",
+						"asignarPedidoALaComanda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. VerListaPendientes [Preparadores]",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{tokenBartender}}",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "{{tokenCervecero}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "token",
+						"value": "{{tokenCocinero}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/preparadores/verListaPendientes",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"preparadores",
+						"verListaPendientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. AsignarPedidoAPreparador [Preparadores]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "{{tokenBartender}}"
+					},
+					{
+						"key": "token",
+						"type": "text",
+						"value": "{{tokenCervecero}}",
+						"disabled": true
+					},
+					{
+						"key": "token",
+						"type": "text",
+						"value": "{{tokenCocinero}}",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pedidoId",
+							"value": "12",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/preparadores/asignarPedidoAPreparador",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"preparadores",
+						"asignarPedidoAPreparador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. TerminarPreparacionDePedido [Preparadores]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "{{tokenBartender}}"
+					},
+					{
+						"key": "token",
+						"type": "text",
+						"value": "{{tokenCervecero}}",
+						"disabled": true
+					},
+					{
+						"key": "token",
+						"type": "text",
+						"value": "{{tokenCocinero}}",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pedidoId",
+							"value": "11",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/preparadores/terminarPreparacionDePedido",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"preparadores",
+						"terminarPreparacionDePedido"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. EntregarPedido [Mozo]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "{{tokenMozo}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pedidoId",
+							"value": "11",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/mozo/entregarPedido",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"mozo",
+						"entregarPedido"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. CobrarMesa [Mozo]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "{{tokenMozo}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigoMesa",
+							"value": "ABCD2",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/mozo/cobrarMesa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"mozo",
+						"cobrarMesa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8. ResponderEncuesta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{tokenSocio}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "puntajeMesa",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "puntajeRestaurante",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "puntajeMozo",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "puntajeCocinero",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Volveria de nuevo",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/clientes/responderEncuesta",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"clientes",
+						"responderEncuesta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9. CerrarMesa [Socio]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{tokenSocio}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "estado",
+							"value": "cerrada",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/mesas/ABCD2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"mesas",
+						"ABCD2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarComanda",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/clientes/consultarComanda/ABCD3/FhK65",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"clientes",
+						"consultarComanda",
+						"ABCD3",
+						"FhK65"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "belu@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "martillo",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/usuarios",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "belu@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "martillo",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

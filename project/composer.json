@@ -1,0 +1,21 @@
+{
+    "name": "lucas/tp_proyecto",
+    "description": "",
+    "authors": [
+        {
+            "name": "Lucas Martin Mascheroni",
+            "email": "lucasmasche00@gmail.com"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^5.2",
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src",
+            "Config\\": "config"
+        }
+    }
+}
